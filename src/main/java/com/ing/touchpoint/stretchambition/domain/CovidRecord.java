@@ -8,6 +8,7 @@ import lombok.Setter;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
+import java.time.LocalDate;
 
 @Getter
 @Setter
@@ -17,16 +18,12 @@ import javax.persistence.IdClass;
 public class CovidRecord {
 
     @Id
-    private String dateRep;
-    private String day;
-    private String month;
-    private String year;
-    private String cases;
-    private String deaths;
+    private LocalDate date;
     @Id
-    private String countriesAndTerritories;
-    private String popData2020;
-    private String continentExp;
+    private String country;
+    private int cases;
+    private int deaths;
+    private int population;
 
     public CovidRecord(){}
 

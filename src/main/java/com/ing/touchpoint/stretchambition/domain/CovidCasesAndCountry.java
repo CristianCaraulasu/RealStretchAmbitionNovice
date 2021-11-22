@@ -10,12 +10,12 @@ import java.io.Serializable;
 @Setter
 public class CovidCasesAndCountry implements Serializable {
 
-    private String dateRep;
-    private String countriesAndTerritories;
+    private String date;
+    private String country;
 
-    public CovidCasesAndCountry(String dateRep, String countriesAndTerritories) {
+    public CovidCasesAndCountry(String date, String country) {
 
-        this.dateRep = dateRep;
-        this.countriesAndTerritories = countriesAndTerritories;
+        this.date = date;
+        this.country = country;
     }
 }

@@ -27,25 +27,4 @@ public class StretchAmbitionApplication {
         SpringApplication.run(StretchAmbitionApplication.class, args);
     }
 
-//    @Bean
-//    CommandLineRunner runner(CovidService covidService) {
-//        return args -> {
-//            //read json and write to DB
-//
-//            ObjectMapper mapper = new ObjectMapper();
-//			TypeReference<List<CovidRecord>> typeReference = new TypeReference<List<CovidRecord>>(){};
-//			InputStream inputStream = TypeReference.class.getResourceAsStream("/covid_json_data_tst.txt");
-//			try {
-//				List<CovidRecord> covidRecords = mapper.readValue(inputStream,typeReference);
-//				covidRecords.forEach(covidRecord -> {
-//					covidService.save(covidRecord);
-//				});
-//				System.out.println("CovidRecords Saved");
-//			}
-//			catch(IOException e){
-//				System.out.println("Unable to save covid data: " + e.getMessage());
-//			}
-//        };
-//    }
-
 }
