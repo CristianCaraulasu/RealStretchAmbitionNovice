@@ -56,7 +56,7 @@ public class CovidController {
             results.forEach( result -> {
 
                 // I don't need other data in order to create object of CovidRecord
-                if(!(result.contains("dateRep") || result.contains("countriesAndTerritories") || result.contains("cases") || result.contains("deaths") || result.contains("popData202")) || result.contains(("continentExp"))) {
+                if(!(result.contains("dateRep") || result.contains("countriesAndTerritories") || result.contains("cases") || result.contains("deaths") || result.contains("popData202") || result.contains("continentExp"))) {
                         return;
                 }
                 String value = Arrays.asList(result.split("\"")).get(1);
