@@ -6,6 +6,7 @@ import com.ing.touchpoint.stretchambition.service.CovidService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -38,14 +39,13 @@ public class CovidController {
         return covidService.list();
     }
 
-    @RequestMapping(value = "/download", method = RequestMethod.GET)
+    @PostMapping
+    @RequestMapping(value = "/download")
     public String getDataInJsonFormat() {
-        // Make a URL to the web page
-        try {
 
+        try {
             URL url = new URL(this.url);
             InputStream content = url.openStream();
-//            FileWriter myWriter = new FileWriter("covid_json_data.txt");
 
             String jsonData = new String(content.readAllBytes());
             System.out.println("\nAccessed  " + url);

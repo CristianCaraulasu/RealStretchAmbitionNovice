@@ -5,15 +5,13 @@ import com.ing.touchpoint.stretchambition.repository.CovidRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
 public class CovidService {
 
     @Autowired
     private CovidRepository covidRespository;
 
-    public CovidService(CovidRepository covidRepository){
+    public CovidService(CovidRepository covidRepository) {
         this.covidRespository = covidRepository;
     }
 
@@ -25,7 +23,7 @@ public class CovidService {
 //        return covidRespository.save(records);
 //    }
 
-    public CovidRecord save(CovidRecord record){
+    public CovidRecord save(CovidRecord record) {
         return covidRespository.save(record);
     }
 

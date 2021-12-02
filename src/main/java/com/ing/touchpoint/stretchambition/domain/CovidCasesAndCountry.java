@@ -1,7 +1,5 @@
 package com.ing.touchpoint.stretchambition.domain;
 
-
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
